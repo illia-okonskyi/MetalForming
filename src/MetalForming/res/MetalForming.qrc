@@ -1,0 +1,18 @@
+<RCC>
+  <qresource prefix="ProjectActions">
+    <file>BuildProject.png</file>
+    <file>New.png</file>
+    <file>Open.png</file>
+    <file>Save.png</file>
+    <file>SaveAs.png</file>
+  </qresource>
+  <qresource prefix="WorkspaceActions">
+    <file>ChangeType.png</file>
+    <file>ClearDeletionHistory.png</file>
+    <file>DeleteLast.png</file>
+    <file>DeleteSelected.png</file>
+    <file>RestoreDeleted.png</file>
+    <file>ClearWorkspace.png</file>
+    <file>Compile.png</file>
+  </qresource>
+</RCC>

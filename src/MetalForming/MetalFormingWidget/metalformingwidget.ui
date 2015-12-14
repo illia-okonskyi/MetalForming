@@ -1,0 +1,963 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CMetalFormingWidgetClass</class>
+ <widget class="QWidget" name="CMetalFormingWidgetClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>558</width>
+    <height>514</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>380</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>CMetalFormingWidget</string>
+  </property>
+  <layout class="QGridLayout" name="layoutWidget" rowstretch="0,0,0" columnstretch="0,0,0">
+   <property name="margin">
+    <number>5</number>
+   </property>
+   <item row="0" column="0" colspan="3">
+    <widget class="QFrame" name="frameTopToolBox">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <layout class="QHBoxLayout" name="layoutTopToolBox">
+      <property name="spacing">
+       <number>4</number>
+      </property>
+      <property name="margin">
+       <number>5</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="btnNewProject">
+        <property name="toolTip">
+         <string>Create new project</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="../res/MetalForming.qrc">
+          <normaloff>:/ProjectActions/New.png</normaloff>:/ProjectActions/New.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnLoadProject">
+        <property name="toolTip">
+         <string>Open existing project...</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="../res/MetalForming.qrc">
+          <normaloff>:/ProjectActions/Open.png</normaloff>:/ProjectActions/Open.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnSaveProject">
+        <property name="toolTip">
+         <string>Save current project</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="../res/MetalForming.qrc">
+          <normaloff>:/ProjectActions/Save.png</normaloff>:/ProjectActions/Save.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnSaveAsProject">
+        <property name="toolTip">
+         <string>Save current project as...</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="../res/MetalForming.qrc">
+          <normaloff>:/ProjectActions/SaveAs.png</normaloff>:/ProjectActions/SaveAs.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnBuildProject">
+        <property name="toolTip">
+         <string>Build project and generate output file</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="../res/MetalForming.qrc">
+          <normaloff>:/ProjectActions/BuildProject.png</normaloff>:/ProjectActions/BuildProject.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frameToolBarSeparator">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::VLine</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <property name="lineWidth">
+         <number>0</number>
+        </property>
+        <property name="midLineWidth">
+         <number>1</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnCompileData">
+        <property name="toolTip">
+         <string>All editions are ended and data for other stages are ready</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="../res/MetalForming.qrc">
+          <normaloff>:/WorkspaceActions/Compile.png</normaloff>:/WorkspaceActions/Compile.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnClearWorkspace">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="toolTip">
+         <string>Clear workspace</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="../res/MetalForming.qrc">
+          <normaloff>:/WorkspaceActions/ClearWorkspace.png</normaloff>:/WorkspaceActions/ClearWorkspace.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnChangeType">
+        <property name="toolTip">
+         <string>Change type of the currently creating object</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="../res/MetalForming.qrc">
+          <normaloff>:/WorkspaceActions/ChangeType.png</normaloff>:/WorkspaceActions/ChangeType.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnRestoreLastDeleted">
+        <property name="toolTip">
+         <string>Restore last deleted object</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="../res/MetalForming.qrc">
+          <normaloff>:/WorkspaceActions/RestoreDeleted.png</normaloff>:/WorkspaceActions/RestoreDeleted.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnDeleteSelected">
+        <property name="toolTip">
+         <string>Delete selected object</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="../res/MetalForming.qrc">
+          <normaloff>:/WorkspaceActions/DeleteSelected.png</normaloff>:/WorkspaceActions/DeleteSelected.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnDeleteLastCreated">
+        <property name="toolTip">
+         <string>Delete last created object</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="../res/MetalForming.qrc">
+          <normaloff>:/WorkspaceActions/DeleteLast.png</normaloff>:/WorkspaceActions/DeleteLast.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnClearDeletionHistory">
+        <property name="toolTip">
+         <string>Clear deletion history</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="../res/MetalForming.qrc">
+          <normaloff>:/WorkspaceActions/ClearDeletionHistory.png</normaloff>:/WorkspaceActions/ClearDeletionHistory.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="labelScaleDesc">
+        <property name="text">
+         <string>Scale:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnScaleIncrease">
+        <property name="maximumSize">
+         <size>
+          <width>20</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Increase scale</string>
+        </property>
+        <property name="text">
+         <string>+</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnScaleReset">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>40</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Reset scale</string>
+        </property>
+        <property name="text">
+         <string>1:1</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnScaleDecrease">
+        <property name="maximumSize">
+         <size>
+          <width>20</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Decrease scale</string>
+        </property>
+        <property name="text">
+         <string>-</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="labelScale">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>X(1 mm), Y(1 mm)</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="3">
+    <widget class="QGroupBox" name="gbInfo">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="title">
+      <string>Info</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+     <layout class="QHBoxLayout" name="layoutInfo">
+      <property name="margin">
+       <number>5</number>
+      </property>
+      <item>
+       <widget class="QGroupBox" name="gbCoordsInfo">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="title">
+         <string>Coordinates info</string>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <layout class="QHBoxLayout" name="layoutCoord">
+         <property name="margin">
+          <number>5</number>
+         </property>
+         <item>
+          <layout class="QVBoxLayout" name="layoutCoordsDesc">
+           <item>
+            <widget class="QLabel" name="labelXPosDesc">
+             <property name="text">
+              <string>XPos:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="labelYPosDesc">
+             <property name="text">
+              <string>YPos:</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="layoutCoordsVal">
+           <item>
+            <widget class="QLabel" name="labelXPos">
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="labelYPos">
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="gbLineInfo">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="title">
+         <string>Line info</string>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <layout class="QHBoxLayout" name="layoutCoord_2">
+         <property name="margin">
+          <number>5</number>
+         </property>
+         <item>
+          <layout class="QVBoxLayout" name="layoutLineDesc">
+           <item>
+            <widget class="QLabel" name="labelLineAngleDesc">
+             <property name="text">
+              <string>Angle:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="labelLineTypeDesc">
+             <property name="text">
+              <string>Type:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="labelSelLineDesc">
+             <property name="text">
+              <string>Selection:</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="layoutLineVal">
+           <item>
+            <widget class="QLabel" name="labelLineAngle">
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="labelLineType">
+             <property name="text">
+              <string>Main</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="labelSelLine">
+             <property name="text">
+              <string>None</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="gbZoneInfo">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="title">
+         <string>Zone info</string>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <layout class="QHBoxLayout" name="layoutCoord_3">
+         <property name="margin">
+          <number>5</number>
+         </property>
+         <item>
+          <layout class="QVBoxLayout" name="layoutZoneDesc">
+           <item>
+            <widget class="QLabel" name="labelZoneTypeDesc">
+             <property name="text">
+              <string>Type:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="labelSelZoneDesc">
+             <property name="text">
+              <string>Selection:</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="layoutZoneVal">
+           <item>
+            <widget class="QLabel" name="labelZoneType">
+             <property name="text">
+              <string>One</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="labelSelZone">
+             <property name="text">
+              <string>None</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="gbZoneMapInfo">
+        <property name="title">
+         <string>Zone Map</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLabel" name="labelZoneMap">
+           <property name="text">
+            <string>Not builded</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="gbInstrumentInfo">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="title">
+         <string>Instrument info</string>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <layout class="QHBoxLayout" name="layoutCoord_4">
+         <property name="margin">
+          <number>5</number>
+         </property>
+         <item>
+          <layout class="QVBoxLayout" name="layoutInstrumentDesc">
+           <item>
+            <widget class="QLabel" name="labelInstrumentAngleDesc">
+             <property name="text">
+              <string>Angle:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="labelSelInstrumentDesc">
+             <property name="text">
+              <string>Selection:</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="layoutInstrumentVal">
+           <item>
+            <widget class="QLabel" name="labelInstrumentAngle">
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="labelSelInstrument">
+             <property name="text">
+              <string>None</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <spacer name="spacerInfo">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QScrollArea" name="paintAreaScroll">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="mouseTracking">
+      <bool>false</bool>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::WheelFocus</enum>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="CPaintArea" name="paintArea">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>213</width>
+        <height>351</height>
+       </rect>
+      </property>
+      <property name="mouseTracking">
+       <bool>true</bool>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2"/>
+     </widget>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QFrame" name="frameRightToolBox">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <layout class="QVBoxLayout" name="layoutRightToolBox">
+      <property name="margin">
+       <number>5</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="btnSetProperties">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Prepare common project data (paper size, matherial parameters, workpiece parameters).</string>
+        </property>
+        <property name="text">
+         <string>Set Properties</string>
+        </property>
+        <property name="autoDefault">
+         <bool>true</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnDrawWorkpiece">
+        <property name="toolTip">
+         <string>Prepare data about workpiece geometry.</string>
+        </property>
+        <property name="text">
+         <string>Draw Workpiece</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnDrawZones">
+        <property name="toolTip">
+         <string>Prepare data about by-zones-division of the workpiece.</string>
+        </property>
+        <property name="text">
+         <string>Draw Zones</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnDrawInstruments">
+        <property name="toolTip">
+         <string>Prepare data about instruments (boundary conditions).</string>
+        </property>
+        <property name="text">
+         <string>Draw Instruments</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="spacerRightToolBox">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnAbout">
+        <property name="text">
+         <string>About...</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <widget class="QtTreePropertyBrowser" name="propertiesEditor">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>250</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="acceptDrops">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>CPaintArea</class>
+   <extends>QWidget</extends>
+   <header>PaintArea\PaintArea.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QtTreePropertyBrowser</class>
+   <extends>QTreeWidget</extends>
+   <header location="global">QtSolutions/qttreepropertybrowser.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>paintAreaScroll</tabstop>
+  <tabstop>btnSetProperties</tabstop>
+  <tabstop>btnDrawWorkpiece</tabstop>
+  <tabstop>btnDrawZones</tabstop>
+  <tabstop>btnDrawInstruments</tabstop>
+  <tabstop>btnNewProject</tabstop>
+  <tabstop>btnLoadProject</tabstop>
+  <tabstop>btnSaveProject</tabstop>
+  <tabstop>btnSaveAsProject</tabstop>
+  <tabstop>btnBuildProject</tabstop>
+  <tabstop>btnCompileData</tabstop>
+  <tabstop>btnClearWorkspace</tabstop>
+  <tabstop>btnChangeType</tabstop>
+  <tabstop>btnRestoreLastDeleted</tabstop>
+  <tabstop>btnDeleteSelected</tabstop>
+  <tabstop>btnDeleteLastCreated</tabstop>
+  <tabstop>btnClearDeletionHistory</tabstop>
+  <tabstop>btnScaleIncrease</tabstop>
+  <tabstop>btnScaleReset</tabstop>
+  <tabstop>btnScaleDecrease</tabstop>
+  <tabstop>propertiesEditor</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../res/MetalForming.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>btnSetProperties</sender>
+   <signal>clicked()</signal>
+   <receiver>CMetalFormingWidgetClass</receiver>
+   <slot>onSetPropertiesClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>104</x>
+     <y>75</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>221</x>
+     <y>174</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnDrawWorkpiece</sender>
+   <signal>clicked()</signal>
+   <receiver>CMetalFormingWidgetClass</receiver>
+   <slot>onDrawWorkpiceClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>104</x>
+     <y>104</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>189</x>
+     <y>129</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnDrawZones</sender>
+   <signal>clicked()</signal>
+   <receiver>CMetalFormingWidgetClass</receiver>
+   <slot>onDrawZonesClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>104</x>
+     <y>133</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>197</x>
+     <y>148</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnDrawInstruments</sender>
+   <signal>clicked()</signal>
+   <receiver>CMetalFormingWidgetClass</receiver>
+   <slot>onDrawInstrumentsClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>104</x>
+     <y>162</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>278</x>
+     <y>256</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnBuildProject</sender>
+   <signal>clicked()</signal>
+   <receiver>CMetalFormingWidgetClass</receiver>
+   <slot>onBuildProjectClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>151</x>
+     <y>22</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>278</x>
+     <y>256</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnAbout</sender>
+   <signal>clicked()</signal>
+   <receiver>CMetalFormingWidgetClass</receiver>
+   <slot>showAboutDialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>57</x>
+     <y>382</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>278</x>
+     <y>256</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>onSetPropertiesClicked()</slot>
+  <slot>onDrawLinesClicked()</slot>
+  <slot>onDrawWorkpiceClicked()</slot>
+  <slot>onDrawZonesClicked()</slot>
+  <slot>onDrawInstrumentsClicked()</slot>
+  <slot>onBuildProjectClicked()</slot>
+  <slot>showAboutDialog()</slot>
+ </slots>
+</ui>
